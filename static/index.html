@@ -1,19 +1,20 @@
 <!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Hello World</title>
-    </head>
-    <body>
-        <h1>Hello World</h1>
-        This is html
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
+    <title>remote-wallpaper</title>
+    <meta name="description" content="sets remote wallpapers">
 
-        <vaadin-upload target="/pictures" 
-                       method="POST" 
-                       timeout="300000" 
-                       headers="{'X-Custom-Header': 'value'}" 
-                       form-data-name="my-attachment">
-        </vaadin-upload>
-    </body>
+    <!-- See https://goo.gl/OOhYW5 -->
+    <link rel="manifest" href="/manifest.json">
+
+    <script src="/bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+
+    <link rel="import" href="/src/remote-wallpaper-app/remote-wallpaper-app.html">
+  </head>
+  <body>
+    <remote-wallpaper-app></remote-wallpaper-app>
+  </body>
 </html>

@@ -18,7 +18,7 @@ func handlePictureUpload(responseWriter http.ResponseWriter, request *http.Reque
 }
 
 func main() {
-	fs := http.FileServer(http.Dir("static"))
+	fs := http.FileServer(http.Dir("static/build/default"))
 	http.Handle("/", fs)
 	http.HandleFunc("/ping", handlePing)
 	http.HandleFunc("/pictures", handlePictureUpload)

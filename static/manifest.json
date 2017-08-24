@@ -1,0 +1,7 @@
+{
+  "name": "remote-wallpaper",
+  "short_name": "remote-wallpaper",
+  "description": "sets remote wallpapers",
+  "start_url": "/",
+  "display": "standalone"
+}

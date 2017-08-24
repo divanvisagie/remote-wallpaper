@@ -1,0 +1,38 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/vaadin-upload/vaadin-upload.html">
+
+<dom-module id="remote-wallpaper-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Upload a wallpaper</h2>
+
+    <vaadin-upload target="/pictures" 
+                    method="POST" 
+                    timeout="300000">
+    </vaadin-upload>
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class RemoteWallpaperApp extends Polymer.Element {
+      static get is() { return 'remote-wallpaper-app'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'remote-wallpaper-app'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(RemoteWallpaperApp.is, RemoteWallpaperApp);
+  </script>
+</dom-module>
