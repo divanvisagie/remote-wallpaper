@@ -40,8 +40,8 @@ func getUbuntuWallpaperCommand() string {
 
 func setWallpaper() {
 
-	response := runCommand(getUbuntuWallpaperCommand())
-	fmt.Println(response)
+	runCommand(getUbuntuWallpaperCommand())
+	runCommand("powershell .\\set_wallpaper.ps1")
 }
 
 func handlePing(responseWriter http.ResponseWriter, request *http.Request) {
