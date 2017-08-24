@@ -27,7 +27,7 @@ func runCommand(command string) string {
 	return string(commandOutput)
 }
 
-func setWallpaper() {
+func getUbuntuWallpaperCommand() string {
 	// gsettings get org.gnome.desktop.background picture-uri
 	// 'file:///[path]/x.jpg'
 	fp, _ := filepath.Abs("./")
@@ -35,9 +35,12 @@ func setWallpaper() {
 	fmt.Println("setting wallpaper to ", fp)
 
 	command := fmt.Sprintf("gsettings get org.gnome.desktop.background picture-uri %s", fp)
+	return command
+}
 
-	fmt.Println("Executing command: ", command)
-	response := runCommand(command)
+func setWallpaper() {
+
+	response := runCommand(getUbuntuWallpaperCommand())
 	fmt.Println(response)
 }
 
