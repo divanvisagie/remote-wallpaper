@@ -7,7 +7,7 @@ script:
   - go build main.go
   - npm install -g bower
   - cd static ; bower install ; polymer build; cd ..
-  - rm remote-wallpaper
+  - rm main
 
 after_success:
   - test -n "$TRAVIS_TAG" && curl -sL https://git.io/goreleaser | bash
